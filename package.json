@@ -1,0 +1,14 @@
+{
+    "name": "angular-js-trainee",
+    "private": true,
+    "version": "0.0.0",
+    "description": "First homework application for AngularJS",
+    "license": "MIT",
+    "devDependencies": {
+        "http-server": "^0.9.0"
+    },
+    "scripts": {
+        "prestart": "npm install",
+        "start": "http-server ./app -a localhost -p 8000 -c-1"
+    }
+}
