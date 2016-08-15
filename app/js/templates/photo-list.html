@@ -1,0 +1,19 @@
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>ID</th>
+        <th>
+            Name
+            <input type="text" name="searchButton" ng-model="query.name" placeholder="Search"/>
+        </th>
+        <th>Likes count</th>
+        <th>Visible</th>
+    </tr>
+    <tr ng-repeat="photo in photos | filter:query" ng-click="goPhotoDetails(photo)">
+        <td>{{photo.id}}</td>
+        <td>{{photo.name}}</td>
+        <td>{{photo.countLikes}}</td>
+        <td>
+            <input type="checkbox" name="visibleCheck" ng-checked="{{photo.visible}}"/>
+        </td>
+    </tr>
+</table>

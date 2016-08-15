@@ -1,0 +1,25 @@
+<div class="col-md-6 col-lg-6">
+    <img src="/img/{{photo.name}}" width="100%"/>
+</div>
+
+<div class="col-md-6 col-lg-6">
+    <form class="col-md-8">
+        <div class="form-group">
+            <label>Photo name:</label>
+            <input type="text" value="{{photo.name}}" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Author: Ivan Ivanov</label>
+        </div>
+        <div class="form-group">
+            <img src="/img/like.png" width="7%"/> {{photo.countLikes}}
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-checked="{{photo.visible}}"/>Visible
+            </label>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <button type="submit" class="btn btn-default" ng-click="goHome()">Cancel</button>
+    </form>
+</div>
