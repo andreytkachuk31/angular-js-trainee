@@ -1,4 +1,4 @@
-photoApp.controller('PhotoDetailsCtrl', function ImageDetailsCtrl($scope, $location, $routeParams, PhotoSrv) {
+photoApp.controller('PhotoDetailsCtrl', function PhotoDetailsCtrl($scope, $location, $routeParams, PhotoSrv) {
     $scope.photo = PhotoSrv.getPhotoById($routeParams.photoId);
 
     $scope.goHome = function () {

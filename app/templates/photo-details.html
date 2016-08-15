@@ -1,5 +1,5 @@
 <div class="col-md-6 col-lg-6">
-    <img src="/img/{{photo.name}}" width="100%"/>
+    <img src="/assets/img/{{photo.name}}" width="100%"/>
 </div>
 
 <div class="col-md-6 col-lg-6">
@@ -9,10 +9,10 @@
             <input type="text" value="{{photo.name}}" class="form-control"/>
         </div>
         <div class="form-group">
-            <label>Author: Ivan Ivanov</label>
+            <label>Author: {{photo.author}}</label>
         </div>
         <div class="form-group">
-            <img src="/img/like.png" width="7%"/> {{photo.countLikes}}
+            <img src="/assets/img/like.png" width="7%"/> {{photo.likes}}
         </div>
         <div class="checkbox">
             <label>

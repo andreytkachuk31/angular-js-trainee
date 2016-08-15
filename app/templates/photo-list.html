@@ -8,10 +8,10 @@
         <th>Likes count</th>
         <th>Visible</th>
     </tr>
-    <tr ng-repeat="photo in photos | filter:query" ng-click="goPhotoDetails(photo)">
+    <tr ng-repeat="photo in photos | filter:query" ng-click="goPhotoDetails(photo.id)">
         <td>{{photo.id}}</td>
         <td>{{photo.name}}</td>
-        <td>{{photo.countLikes}}</td>
+        <td>{{photo.likes}}</td>
         <td>
             <input type="checkbox" name="visibleCheck" ng-checked="{{photo.visible}}"/>
         </td>

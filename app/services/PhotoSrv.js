@@ -3,25 +3,29 @@ photoApp.service('PhotoSrv', function () {
         {
             id: 1,
             name: 'Summer.jpeg',
-            countLikes: 3,
+            likes: 3,
+            author: "Ivan Ivanov",
             visible: true
         },
         {
             id: 2,
             name: 'Autumn.png',
-            countLikes: 6,
+            likes: 6,
+            author: "Vasya Pupkin",
             visible: false
         },
         {
             id: 3,
             name: 'Winter.png',
-            countLikes: 9,
+            likes: 9,
+            author: "Petr Petrov",
             visible: true
         },
         {
             id: 4,
             name: 'Spring.JPG',
-            countLikes: 12,
+            likes: 12,
+            author: "Anna Ivanova",
             visible: true
         }
     ];
@@ -31,13 +35,15 @@ photoApp.service('PhotoSrv', function () {
             return photos;
         },
         getPhotoById: function(id) {
-            for (var photo_index in photos) {
-                var photo = photos[photo_index];
-                if (photo.id == id) {
-                    return photo;
+            var result = -1;
+
+            for(var i = 0; i < photos.length; i++) {
+                if(photos[i].id == id) {
+                    result = photos[i];
                 }
             }
-            return null;
+
+            return result;
         }
     }
 });
