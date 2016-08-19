@@ -1,36 +1,12 @@
-photoApp.service('PhotoSrv', function () {
-    var photos = [
-        {
-            id: 1,
-            name: 'Summer.jpeg',
-            likes: 3,
-            author: "Ivan Ivanov",
-            visible: true
-        },
-        {
-            id: 2,
-            name: 'Autumn.png',
-            likes: 6,
-            author: "Vasya Pupkin",
-            visible: false
-        },
-        {
-            id: 3,
-            name: 'Winter.png',
-            likes: 9,
-            author: "Petr Petrov",
-            visible: true
-        },
-        {
-            id: 4,
-            name: 'Spring.JPG',
-            likes: 12,
-            author: "Anna Ivanova",
-            visible: true
-        }
-    ];
+photoApp.service('PhotoSrv', function ($http) {
+    var photos = null;
+
+    var promise = $http.get('photos.json').success(function (response) {
+        photos = response;
+    });
 
     return {
+        promise:promise,
         getAllPhotos: function () {
             return photos;
         },
